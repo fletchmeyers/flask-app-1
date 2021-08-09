@@ -6,3 +6,51 @@
 }
 
 /* Your styles begin here */
+
+.container{
+    height: 100px;
+    width: 250px;
+    background-color: slategrey;
+    display: flex;
+    flex-flow: row;
+    
+}
+
+.ReturnLink{    
+    height: 100px;
+    width: 250px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-flow: row;
+}
+
+.description{
+    height: 100px;
+    width: 2560px;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-flow: row;
+}
+
+.details{
+    height: 1100px;
+    width: 2520px;
+    background-color: blue;
+    display: flex;
+    flex-flow: row;
+}
+
+
+
+
+
+.img{
+    height: 800px;
+    width: 850px;
+    background-color: saddlebrown;
+}
+.type{
+    height: 100px;
+    width: 250px;
+    background-color: green;
+}

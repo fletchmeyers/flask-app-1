@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     $.ajax({
         method: "GET",
-        url: "api/pokemon/" + `${uri[1]}`,
+        url: "api/pokemon/" + uri[1],
         dataType: "json",
         success(data){
             //reference a class in the html with $(".class") which is how jquery does it
@@ -18,12 +18,11 @@ $(document).ready(function() {
             //creating strings with `` allows you to use string interpolation in jquery
             //to actually add in the interpolated data, use ${data}
             //you reference json items the same way you'd reference a multi-dimensional array i.e. data[num]["name"]
+            
 
-
-
-            var img = data[`${uri[1]}`]["image_url"];
-            var name = data[`${uri[1]}`]["name"];
-            var description = data[`${uri[1]}`]["description"];
+            var img = data["image_url"];
+            var name = data["name"];
+            var description = data["description"];
             
 
             $(".container")

@@ -8,12 +8,13 @@
 /* Your styles begin here */
 
 .container{
-    height: 100px;
-    width: 250px;
+    height: 900px;
+    width: 900px;
     background-color: slategrey;
     display: flex;
-    flex-flow: row;
-    
+    flex-flow: column;
+    padding: 30px;
+    margin: auto;
 }
 
 .ReturnLink{    
@@ -21,36 +22,45 @@
     width: 250px;
     background-color: blanchedalmond;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
 }
 
 .description{
     height: 100px;
-    width: 2560px;
-    background-color: rebeccapurple;
-    display: flex;
-    flex-flow: row;
-}
-
-.details{
-    height: 1100px;
-    width: 2520px;
-    background-color: blue;
-    display: flex;
-    flex-flow: row;
-}
-
-
-
-
-
-.img{
-    height: 800px;
     width: 850px;
-    background-color: saddlebrown;
+
 }
-.type{
+.img{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+}
+.types{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: column;
+}
+
+.name{
     height: 100px;
     width: 250px;
-    background-color: green;
+    display: flex;
+    flex-flow: column;
 }
+.evolutionsPokemon, .evolutionsLevel, .evolutionsMethod{
+    height: 100px;
+    width: 20vw;
+
+    border-collapse: collapse;
+    border: 2px solid black;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+

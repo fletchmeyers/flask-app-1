@@ -4,9 +4,9 @@ $(document).ready(function() {
 
     var fullUrl = window.location.href;
     var uri = fullUrl.split("http://127.0.0.1:5000/");
-    var next = parseInt(uri[1]) + 1;
-    console.log("work??");
-    console.log(uri[1]);
+    // var next = parseInt(uri[1]) + 1;
+    // console.log("work??");
+    // console.log(uri[1]);
     
     
     
@@ -28,7 +28,7 @@ $(document).ready(function() {
             var description = data["description"];
             var types = data["types"];
             var evolutions = data["evolutions"];
-            console.log(evolutions.length);
+            // console.log(evolutions.length);
           
 
 
@@ -48,30 +48,26 @@ $(document).ready(function() {
                 $(".types").append(`<li>${types[i]}</li>`);
             }   
             
-            for (let i = 0; i < evolutions.length; i++) {
-                $(".evolutionsPokemon")
-                    .append(
-                        `<a href="/${data["evolutions"][i]["id"]}">
-                            <tr>
-                                <td>${data["evolutions"][i]["to"]}</td>
-                            </tr>
-                        <a>`
-                    );
-            
 
-                $(".evolutionsLevel")
+
+            for (let i = 0; i < evolutions.length; i++) {
+                $(".evolutions")
                     .append(
-                        `<tr><td>${data["evolutions"][i]["level"]}</td></tr>`
+                        `<tr>
+                            <td>
+                                <a href="/${data["evolutions"][i]["id"]}">
+                                ${data["evolutions"][i]["to"]}
+                                </a>                                
+                            </td>
+                            <td>
+                                ${data["evolutions"][i]["level"]}
+                            </td>
+                            <td>
+                                ${data["evolutions"][i]["method"]}
+                            </td>
+                        </tr>`
                     );
-            
-                
-             
-                $(".evolutionsMethod")
-                    .append(
-                        `<tr><td>${data["evolutions"][i]["method"]}</td></tr>`
-                    );
-            
-                }
+            }
 
         }
     });

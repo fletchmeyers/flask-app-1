@@ -10,7 +10,6 @@
 .container{
     height: 900px;
     width: 900px;
-    background-color: slategrey;
     display: flex;
     flex-flow: column;
     padding: 30px;
@@ -20,7 +19,6 @@
 .ReturnLink{    
     height: 100px;
     width: 250px;
-    background-color: blanchedalmond;
     display: flex;
     flex-flow: column;
 }
@@ -50,17 +48,27 @@
     display: flex;
     flex-flow: column;
 }
-.evolutionsPokemon, .evolutionsLevel, .evolutionsMethod{
-    height: 100px;
-    width: 20vw;
-
-    border-collapse: collapse;
-    border: 2px solid black;
+.evolutions{
+    width: 600px;
 
 }
 
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
 }
 
+td{
+display: inline-block;
+width: 200px;
+}
+
+th{
+    width: 200px;
+}
+
+table{
+    width: 600px;
+}

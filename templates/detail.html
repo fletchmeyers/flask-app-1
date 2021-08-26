@@ -15,16 +15,14 @@
     </head>
     <body>
         <!-- Your HTML should be here -->
-        <a href="/"> <h3>Return to main page</h3></a>
+        <a href="/"class="ReturnLink"><h3>Return to main page</h3></a>
         <div class="container">
-            <div class="name"></div>
-            <div class="img"></div>
-            <h3>Types</h3>
-            <ul>
-                <div class="types"></div>
-            </ul>
+            <div class="js_name name"></div>
+            <div class="js_img img"></div>
+            <h3>Types</h3>            
+                <ul class="js_types types"></ul>            
             <h3>Description </h3>        
-            <div class="description"></div>
+            <div class="js_description description"></div>
             
             <h3>Evolutions </h3>
             <table>
@@ -33,13 +31,9 @@
                     <th>Level   </th>
                     <th>Method   </th>
                 </tr>
-             </table> <!--using two separate tables so the headers stay at the top -->
-            <table>
-                <tr>
 
-                    <div class="evolutions"></div>
-
-                </tr>
+                <tbody class="js_evolutions evolutions"></tbody>
+                
             </table>
             
         </div>

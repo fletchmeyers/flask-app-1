@@ -3,61 +3,37 @@
 $(document).ready(function() {
 
     var fullUrl = window.location.href;
-    var uri = fullUrl.split("http://127.0.0.1:5000/");
-    // var next = parseInt(uri[1]) + 1;
-    // console.log("work??");
-    // console.log(uri[1]);
-    
-    
-    
+    var uri = fullUrl.split("http://127.0.0.1:5000/");    
 
     $.ajax({
         method: "GET",
         url: "api/pokemon/" + uri[1],
         dataType: "json",
         success(data){
-            //reference a class in the html with $(".class") which is how jquery does it
-            //append adds some stuff to the end of whatever div you've referenced
-            //creating strings with `` allows you to use string interpolation in jquery
-            //to actually add in the interpolated data, use ${data}
-            //you reference json items the same way you'd reference a multi-dimensional array i.e. data[num]["name"]
+
+            var js_img = data["image_url"];
+            var js_name = data["name"];
+            var js_description = data["description"];
+            var js_types = data["types"];
+            var js_evolutions = data["evolutions"];
+
+
+            $(".js_name").append( `<h1>${js_name}</h1>`);
+            $(".js_img").append(`<img src="${js_img}" alt="${js_name}" width="100%" height="100%">`);
+            $(".js_description").append(`<p>${js_description}</p>`);    
             
-
-            var img = data["image_url"];
-            var name = data["name"];
-            var description = data["description"];
-            var types = data["types"];
-            var evolutions = data["evolutions"];
-            // console.log(evolutions.length);
-          
-
-
-
-
-
-
-
-
-
-
-            $(".name").append( `<h1>${name}</h1>`);
-            $(".img").append(`<img src="${img}" alt="${name}" width="100%" height="100%">`);
-            $(".description").append(`<p>${description}</p>`);    
-            
-            for (let i = 0; i < types.length; i++) {         
-                $(".types").append(`<li>${types[i]}</li>`);
+            for (let i = 0; i < js_types.length; i++) {         
+                $(".js_types").append(`<li>${js_types[i]}</li>`);
             }   
-            
 
-
-            for (let i = 0; i < evolutions.length; i++) {
-                $(".evolutions")
+            for (let i = 0; i < js_evolutions.length; i++) {
+                $(".js_evolutions")
                     .append(
                         `<tr>
                             <td>
                                 <a href="/${data["evolutions"][i]["id"]}">
                                 ${data["evolutions"][i]["to"]}
-                                </a>                                
+                                </a>                               
                             </td>
                             <td>
                                 ${data["evolutions"][i]["level"]}

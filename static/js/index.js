@@ -11,15 +11,18 @@ $(document).ready(function() {
             //creating strings with `` allows you to use string interpolation in jquery
             //to actually add in the interpolated data, use ${data}
             //you reference json items the same way you'd reference a multi-dimensional array i.e. data[num]["name"]
-            for (i=0; i < 151; i++) { 
 
+            
+            for (let i in data) { 
+                
                 var name = data[i]["name"];
                 var img = data[i]["image_url"];
+                var next = Number(i) + 1;
 
                 
-                $(".container")
+                $(".js_container")
                     .append(
-                    `<a href="/${i+1}" class='pokemon'>
+                    `<a href="/${next}" class='pokemon'>
                         <p>${name}</p>
                         <img src="${img}" alt="${name}" width="80%" height="80%">
                     </a>`);

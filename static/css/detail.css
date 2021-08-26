@@ -6,3 +6,69 @@
 }
 
 /* Your styles begin here */
+
+.container{
+    height: 900px;
+    width: 900px;
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+    margin: auto;
+}
+
+.ReturnLink{    
+    height: 100px;
+    width: 250px;
+    display: flex;
+    flex-flow: column;
+}
+
+.description{
+    height: 100px;
+    width: 850px;
+
+}
+.img{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+}
+.types{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: column;
+}
+
+.name{
+    height: 100px;
+    width: 250px;
+    display: flex;
+    flex-flow: column;
+}
+.evolutions{
+    width: 600px;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+td{
+display: inline-block;
+width: 200px;
+}
+
+th{
+    width: 200px;
+}
+
+table{
+    width: 600px;
+}
